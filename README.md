@@ -3,6 +3,7 @@
 TODO: Write a gem description
 
 [![Build Status](https://travis-ci.org/sue445/tweet_validator.png?branch=master)](https://travis-ci.org/sue445/tweet_validator)
+[![Dependency Status](https://gemnasium.com/sue445/tweet_validator.svg)](https://gemnasium.com/sue445/tweet_validator)
 
 ## Installation
 
