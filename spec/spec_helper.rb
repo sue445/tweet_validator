@@ -1,3 +1,16 @@
+if ENV["COVERAGE"]
+  require 'simplecov'
+  require 'coveralls'
+  require 'codeclimate-test-reporter'
+
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    CodeClimate::TestReporter::Formatter,
+    Coveralls::SimpleCov::Formatter
+  ]
+  SimpleCov.start
+end
+
+
 require "tweet_validator"
 require "rspec-parameterized"
 
