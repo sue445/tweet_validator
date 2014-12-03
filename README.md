@@ -1,6 +1,6 @@
 # TweetValidator
 
-TODO: Write a gem description
+tweet length check validator
 
 [![Build Status](https://travis-ci.org/sue445/tweet_validator.png?branch=master)](https://travis-ci.org/sue445/tweet_validator)
 [![Dependency Status](https://gemnasium.com/sue445/tweet_validator.svg)](https://gemnasium.com/sue445/tweet_validator)
@@ -29,7 +29,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/tweet_validator/fork )
+1. Fork it ( https://github.com/sue445/tweet_validator/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
