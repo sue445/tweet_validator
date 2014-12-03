@@ -23,4 +23,5 @@ Style/CaseEquality:
   Enabled: false
 Style/SpaceBeforeComma:
   Enabled: false
-  
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: space
