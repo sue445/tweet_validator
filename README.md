@@ -63,7 +63,7 @@ tweet.valid?
 ```
 
 ## Changelog
-[full changelog](https://github.com/sue445/tweet_validatorcompare/0.0.1...master)
+[full changelog](https://github.com/sue445/tweet_validator/compare/0.0.1...master)
 
 ### 0.0.1
 * first release
