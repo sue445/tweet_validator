@@ -26,7 +26,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Tweet < ActiveRecord::Base
+  validates :message, tweet_length: true
+end
+```
+
+### Not Rails
+
+include `TweetValidator` manually
+
+```ruby
+class Tweet < ActiveRecord::Base
+  include TweetValidator
+
+  validates :message, tweet_length: true
+end
+```
+
+## Specification
+calculate the length excluding `%<〜>` and `%{〜}`
+
+### Example
+```ruby
+tweet.message = "a" * 140
+tweet.valid?
+# => true
+
+tweet.message = "a" * 141
+tweet.valid?
+# => false
+
+tweet.message = "a" * 140 + "%{screen_name}"
+tweet.valid?
+# => true
+```
 
 ## Contributing
 
