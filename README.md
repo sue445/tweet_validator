@@ -62,6 +62,12 @@ tweet.valid?
 # => true
 ```
 
+## Changelog
+[full changelog](https://github.com/sue445/tweet_validatorcompare/0.0.1...master)
+
+### 0.0.1
+* first release
+
 ## Contributing
 
 1. Fork it ( https://github.com/sue445/tweet_validator/fork )
