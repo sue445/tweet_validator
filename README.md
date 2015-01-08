@@ -84,7 +84,13 @@ If `short_url_length` and `short_url_length_https` is changed, please set new va
 see. https://dev.twitter.com/rest/reference/get/help/configuration
 
 ## Changelog
-[full changelog](https://github.com/sue445/tweet_validator/compare/0.0.1...master)
+[full changelog](https://github.com/sue445/tweet_validator/compare/0.0.2...master)
+
+### 0.0.2
+[full changelog](https://github.com/sue445/tweet_validator/compare/0.0.1...0.0.2)
+
+* check `t.co` url length
+  * https://github.com/sue445/tweet_validator/pull/5
 
 ### 0.0.1
 * first release
