@@ -6,8 +6,8 @@ require 'tweet_validator/version'
 Gem::Specification.new do |spec|
   spec.name          = "tweet_validator"
   spec.version       = TweetValidator::VERSION
-  spec.authors       = ["sueyoshi_go"]
-  spec.email         = ["go.sueyoshi@drecom.co.jp"]
+  spec.authors       = ["sue445"]
+  spec.email         = ["sue445@sue445.net"]
   spec.summary       = %q{tweet length check validator}
   spec.description   = %q{tweet length check validator}
   spec.homepage      = "https://github.com/sue445/tweet_validator"
