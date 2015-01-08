@@ -8,6 +8,9 @@ tweet length check validator
 [![Code Climate](https://codeclimate.com/github/sue445/tweet_validator/badges/gpa.svg)](https://codeclimate.com/github/sue445/tweet_validator)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/tweet_validator.svg)](https://coveralls.io/r/sue445/tweet_validator)
 
+## Requirements
+ruby 2.0+
+
 ## Installation
 
 Add this line to your application's Gemfile:
