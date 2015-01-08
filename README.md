@@ -68,7 +68,7 @@ tweet.valid?
 "https://github.com/sue445/tweet_validator".length
 # => 41
 
-tweet.message = "a" * 110 + "http://github.com/sue445/tweet_validator"
+tweet.message = "a" * 110 + "https://github.com/sue445/tweet_validator"
 tweet.valid?
 # => true
 ```
