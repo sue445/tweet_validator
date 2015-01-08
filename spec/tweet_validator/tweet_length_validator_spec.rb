@@ -62,4 +62,26 @@ describe TweetValidator::TweetLengthValidator do
     end
 
   end
+
+  describe "#shorten_url_length" do
+    subject{ TweetValidator::TweetLengthValidator.shorten_url_length(tweet) }
+
+    where(:tweet, :shorten_length) do
+      [
+        ["github", 6],
+
+        ["http://github.com/"                      , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH],
+        ["http://github.com/sue445/tweet_validator", TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH],
+        ["github http://github.com/"               , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH + 7],
+
+        ["https://github.com/"                      , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS],
+        ["https://github.com/sue445/tweet_validator", TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS],
+        ["github https://github.com/"               , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS + 7],
+      ]
+    end
+
+    with_them do
+      it { should eq shorten_length }
+    end
+  end
 end
