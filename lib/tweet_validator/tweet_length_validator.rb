@@ -16,7 +16,7 @@ module TweetValidator
     def self.valid_tweet?(tweet)
       return false unless tweet
       return false if tweet.empty?
-      return false unless sanitize(tweet).length <= TWEET_MAX_LENGTH
+      return false unless shorten_url_length(sanitize(tweet)) <= TWEET_MAX_LENGTH
 
       true
     end

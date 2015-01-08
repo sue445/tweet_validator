@@ -21,6 +21,8 @@ describe TweetValidator::TweetLengthValidator do
           ["a"],
           ["a" * 130 + "%<this_is_variable>"],
           ["a" * 130 + "%{this_is_variable}"],
+          ["a" * 110 + "http://github.com/sue445/tweet_validator"],
+          ["a" * 110 + "https://github.com/sue445/tweet_validator"],
         ]
       end
 
