@@ -5,10 +5,6 @@ module TweetValidator
   class TweetLengthValidator < ActiveModel::EachValidator
     TWEET_MAX_LENGTH = 140
 
-    # via. https://dev.twitter.com/rest/reference/get/help/configuration
-    SHORT_URL_LENGTH       = 22
-    SHORT_URL_LENGTH_HTTPS = 23
-
     def validate_each(record, attribute, value)
       record.errors.add(attribute, :invalid_tweet) unless TweetLengthValidator.valid_tweet?(value)
     end
@@ -33,11 +29,11 @@ module TweetValidator
     private_class_method
 
     def self.dummy_http_url
-      dummy_url("http://", SHORT_URL_LENGTH)
+      dummy_url("http://", TweetValidator.config.short_url_length)
     end
 
     def self.dummy_https_url
-      dummy_url("https://", SHORT_URL_LENGTH_HTTPS)
+      dummy_url("https://", TweetValidator.config.short_url_length_https)
     end
 
     def self.dummy_url(prefix, max_length)

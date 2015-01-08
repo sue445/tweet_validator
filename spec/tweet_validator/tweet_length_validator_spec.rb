@@ -1,4 +1,7 @@
 describe TweetValidator::TweetLengthValidator do
+  let(:short_url_length)      { TweetValidator.config.short_url_length }
+  let(:short_url_length_https){ TweetValidator.config.short_url_length_https }
+
   let(:model_class) do
     Struct.new(:message_template) do
       include ActiveModel::Validations
@@ -72,13 +75,13 @@ describe TweetValidator::TweetLengthValidator do
       [
         ["github", 6],
 
-        ["http://github.com/"                      , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH],
-        ["http://github.com/sue445/tweet_validator", TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH],
-        ["github http://github.com/"               , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH + 7],
+        ["http://github.com/"                       , short_url_length],
+        ["http://github.com/sue445/tweet_validator" , short_url_length],
+        ["github http://github.com/"                , short_url_length + 7],
 
-        ["https://github.com/"                      , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS],
-        ["https://github.com/sue445/tweet_validator", TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS],
-        ["github https://github.com/"               , TweetValidator::TweetLengthValidator::SHORT_URL_LENGTH_HTTPS + 7],
+        ["https://github.com/"                      , short_url_length_https],
+        ["https://github.com/sue445/tweet_validator", short_url_length_https],
+        ["github https://github.com/"               , short_url_length_https + 7],
       ]
     end
 

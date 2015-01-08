@@ -60,7 +60,25 @@ tweet.valid?
 tweet.message = "a" * 140 + "%{screen_name}"
 tweet.valid?
 # => true
+
+# url length is calculated as t.co
+"https://github.com/sue445/tweet_validator".length
+# => 41
+
+tweet.message = "a" * 110 + "http://github.com/sue445/tweet_validator"
+tweet.valid?
+# => true
 ```
+
+## Configuration
+```ruby
+TweetValidator.config.short_url_length = 22
+TweetValidator.config.short_url_length_https = 23
+```
+
+If `short_url_length` and `short_url_length_https` is changed, please set new value.
+
+see. https://dev.twitter.com/rest/reference/get/help/configuration
 
 ## Changelog
 [full changelog](https://github.com/sue445/tweet_validator/compare/0.0.1...master)
