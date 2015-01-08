@@ -19,5 +19,4 @@ notifications:
     secure: ZVIAWIIVaTjj1m4CVUtCj8WZH6HlGvkceKIGbyMOYaSDBAF+2veKrfUMfTeiTiQqveV3dXFjfnHSuP6zV3X1qIT2MrFb+MsDF7uKOMY4xUL+4mtk72sZ1jCdgg5LoBtNz/ueDGI6wIR14q1Z+L9JIlgXSiXKZfoSJj6b71JCAKM=
 matrix:
   allow_failures:
-  - rvm: 2.2
   - rvm: ruby-head
