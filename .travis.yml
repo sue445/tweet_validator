@@ -4,6 +4,7 @@ rvm:
 - 2.1
 - 2.2
 - ruby-head
+cache: bundler
 bundler_args: "--jobs=2"
 before_script:
 - export CODECLIMATE_REPO_TOKEN=61b7ac90a58416aff0da12650d731dbdae34c38f806601899e9df3f5883bfedc
