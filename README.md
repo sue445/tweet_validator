@@ -10,7 +10,7 @@ tweet length check validator
 
 ## Requirements
 * ruby 2.0+
-* rails 4.0+
+* activesupport, activemodel 4.0+
 
 ## Installation
 
