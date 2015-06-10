@@ -9,7 +9,8 @@ tweet length check validator
 [![Coverage Status](https://img.shields.io/coveralls/sue445/tweet_validator.svg)](https://coveralls.io/r/sue445/tweet_validator)
 
 ## Requirements
-ruby 2.0+
+* ruby 2.0+
+* rails 4.0+
 
 ## Installation
 
