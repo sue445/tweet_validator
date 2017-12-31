@@ -3,6 +3,8 @@ rvm:
 - 2.1
 - 2.2.6
 - 2.3.2
+- 2.4.3
+- 2.5.0
 - ruby-head
 gemfile:
 - gemfiles/rails4_0.gemfile
