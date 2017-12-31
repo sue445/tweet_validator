@@ -11,6 +11,8 @@ gemfile:
 - gemfiles/rails4_1.gemfile
 - gemfiles/rails4_2.gemfile
 - gemfiles/rails5_0.gemfile
+- gemfiles/rails5_1.gemfile
+- gemfiles/rails5_2.gemfile
 cache: bundler
 bundler_args: "--jobs=2"
 before_install:
@@ -32,8 +34,16 @@ notifications:
 matrix:
   allow_failures:
   - rvm: ruby-head
+
+  # TODO: Remove after rails 5.2.0 is released!
+  - gemfile: gemfiles/rails5_2.gemfile
+
   exclude:
   # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
   - rvm: 2.1
     gemfile: gemfiles/rails5_0.gemfile
+  - rvm: 2.1
+    gemfile: gemfiles/rails5_1.gemfile
+  - rvm: 2.1
+    gemfile: gemfiles/rails5_2.gemfile
 sudo: false
