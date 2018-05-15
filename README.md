@@ -4,7 +4,6 @@ tweet length check validator
 
 [![Gem Version](https://badge.fury.io/rb/tweet_validator.svg)](http://badge.fury.io/rb/tweet_validator)
 [![Build Status](https://travis-ci.org/sue445/tweet_validator.png?branch=master)](https://travis-ci.org/sue445/tweet_validator)
-[![Dependency Status](https://gemnasium.com/sue445/tweet_validator.svg)](https://gemnasium.com/sue445/tweet_validator)
 [![Code Climate](https://codeclimate.com/github/sue445/tweet_validator/badges/gpa.svg)](https://codeclimate.com/github/sue445/tweet_validator)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/tweet_validator.svg)](https://coveralls.io/r/sue445/tweet_validator)
 
