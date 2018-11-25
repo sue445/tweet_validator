@@ -1,46 +1,46 @@
 language: ruby
 rvm:
-- 2.1
-- 2.2.6
-- 2.3.2
-- 2.4.3
-- 2.5.0
-- ruby-head
+  - 2.1
+  - 2.2.6
+  - 2.3.2
+  - 2.4.3
+  - 2.5.0
+  - ruby-head
 gemfile:
-- gemfiles/rails4_0.gemfile
-- gemfiles/rails4_1.gemfile
-- gemfiles/rails4_2.gemfile
-- gemfiles/rails5_0.gemfile
-- gemfiles/rails5_1.gemfile
-- gemfiles/rails5_2.gemfile
+  - gemfiles/rails4_0.gemfile
+  - gemfiles/rails4_1.gemfile
+  - gemfiles/rails4_2.gemfile
+  - gemfiles/rails5_0.gemfile
+  - gemfiles/rails5_1.gemfile
+  - gemfiles/rails5_2.gemfile
 cache: bundler
 bundler_args: "--jobs=2"
 before_install:
-- gem update --system --no-document
-- gem install bundler -v 1.16.1 --no-document
+  - gem update --system --no-document
+  - gem install bundler -v 1.16.1 --no-document
 before_script:
-- export CODECLIMATE_REPO_TOKEN=61b7ac90a58416aff0da12650d731dbdae34c38f806601899e9df3f5883bfedc
-- export COVERAGE=true
+  - export CODECLIMATE_REPO_TOKEN=61b7ac90a58416aff0da12650d731dbdae34c38f806601899e9df3f5883bfedc
+  - export COVERAGE=true
 script:
-- bundle exec rspec
-- bundle exec codeclimate-test-reporter
+  - bundle exec rspec
+  - bundle exec codeclimate-test-reporter
 branches:
   only:
-  - master
+    - master
 notifications:
   email: false
   slack:
     secure: ZVIAWIIVaTjj1m4CVUtCj8WZH6HlGvkceKIGbyMOYaSDBAF+2veKrfUMfTeiTiQqveV3dXFjfnHSuP6zV3X1qIT2MrFb+MsDF7uKOMY4xUL+4mtk72sZ1jCdgg5LoBtNz/ueDGI6wIR14q1Z+L9JIlgXSiXKZfoSJj6b71JCAKM=
 matrix:
   allow_failures:
-  - rvm: ruby-head
+    - rvm: ruby-head
 
   exclude:
-  # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
-  - rvm: 2.1
-    gemfile: gemfiles/rails5_0.gemfile
-  - rvm: 2.1
-    gemfile: gemfiles/rails5_1.gemfile
-  - rvm: 2.1
-    gemfile: gemfiles/rails5_2.gemfile
+    # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
+    - rvm: 2.1
+      gemfile: gemfiles/rails5_0.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails5_1.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails5_2.gemfile
 sudo: false
