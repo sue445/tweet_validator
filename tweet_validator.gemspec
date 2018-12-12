@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "activemodel"
   spec.add_dependency "activesupport"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "bundler", ">= 1.7"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "railties"
   spec.add_development_dependency "rake", "~> 10.0"
